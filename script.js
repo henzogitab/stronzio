@@ -94,14 +94,12 @@ function applyFilters() {
 }
 
 function openModal(el) {
-    // Gestione dell'immagine (fall back a un placeholder se assente)
     const imageUrl = el.image && el.image.url ? el.image.url : 'https://via.placeholder.com/300x200?text=Immagine+Non+Disponibile';
     const imageTitle = el.image && el.image.title ? el.image.title : el.name;
 
     let enValue = el.electronegativity_pauling || el.extraData.electronegativity || null;
     let enHtml = 'N/D';
     if (enValue) {
-        // Max teorico è 4.0 (Fluoro)
         let percentage = Math.min((enValue / 4.0) * 100, 100); 
         enHtml = `
             ${enValue}
@@ -111,7 +109,7 @@ function openModal(el) {
         `;
     }
 
-    // Struttura HTML modale ripristinata con layout a due colonne e foto
+    // Qui aggiungiamo il bottone Wikipedia usando el.source
     modalBody.innerHTML = `
         <div class="modal-header">
             <div class="modal-symbol">${el.symbol}</div>
@@ -137,6 +135,10 @@ function openModal(el) {
                 <p><strong>Punto di Ebollizione:</strong> ${el.boil ? el.boil + ' K' : 'N/D'}</p>
                 <p><strong>Scoperto da:</strong> ${el.discovered_by || 'Sconosciuto'}</p>
                 <p style="font-size: 0.9rem; margin-top: 15px;"><strong>Descrizione:</strong> ${el.summary || 'Nessuna descrizione.'}</p>
+                
+                <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="wiki-btn">
+                    Leggi di più su Wikipedia ↗
+                </a>
             </div>
         </div>
     `;
