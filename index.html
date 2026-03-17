@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Strontium | La tavola periodica degli elementi poco raccomandabili</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☢️</text></svg>">
+    <meta property="og:title" content="Strontium | Elementi poco raccomandabili">
+    <meta property="og:description" content="Esplora la tavola periodica interattiva definitiva. Dati completi, stati fisici, foto e curiosità per ogni elemento.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Periodic_table_%28Italian%29.svg/1200px-Periodic_table_%28Italian%29.svg.png">
+    <meta property="og:url" content="https://il-tuo-sito-qui.com">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 style="margin-bottom: 5px;">Strontium</h1>
+        <div style="font-size: 1rem; color: #aaa; margin-bottom: 20px; font-style: italic;">
+            La tavola periodica degli elementi poco raccomandabili
+        </div>
+        
+        <div class="filters">
+            <div>
+                <label for="search-filter">Cerca:</label>
+                <input type="text" id="search-filter" placeholder="Es. Fe, Gold, Carbon...">
+            </div>
+            <div>
+                <label for="category-filter">Classe Chimica:</label>
+                <select id="category-filter">
+                    <option value="all">Tutte le Classi</option>
+                    <option value="alkali-metal">Metalli Alcalini</option>
+                    <option value="alkaline-earth-metal">Metalli Alcalino-Terrosi</option>
+                    <option value="transition-metal">Metalli di Transizione</option>
+                    <option value="post-transition-metal">Metalli Post-Transizione</option>
+                    <option value="metalloid">Metalloidi</option>
+                    <option value="polyatomic-nonmetal">Non Metalli Poliatomici</option>
+                    <option value="diatomic-nonmetal">Non Metalli Diatomici</option>
+                    <option value="noble-gas">Gas Nobili</option>
+                    <option value="lanthanide">Lantanidi</option>
+                    <option value="actinide">Attinidi</option>
+                </select>
+            </div>
+            <div>
+                <label for="phase-filter">Stato Fisico:</label>
+                <select id="phase-filter">
+                    <option value="all">Tutti</option>
+                    <option value="Solid">Solido</option>
+                    <option value="Liquid">Liquido</option>
+                    <option value="Gas">Gas</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="periodic-table" class="periodic-table"></div>
+    </main>
+
+    <div id="element-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
