@@ -197,3 +197,26 @@ header {
     transition: width 0.5s ease-out;
     background: linear-gradient(90deg, #4db8ff 0%, #ff5555 100%);
 }
+
+/* -- Bottone Wikipedia -- */
+.wiki-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #555;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, border-color 0.2s;
+    text-align: center;
+    width: calc(100% - 40px); /* Si adatta alla larghezza */
+}
+
+.wiki-btn:hover {
+    background-color: #4db8ff;
+    color: #000;
+    border-color: #4db8ff;
+    font-weight: bold;
+}
